@@ -29,7 +29,7 @@ class _FirstDisplayState extends State<FirstDisplay> {
                 // statustopcVh (1:7)
                 left: 24,
                 top: 10,
-                child: Container(
+                child: SizedBox(
                   width: 343,
                   height: 24,
                   child: Row(
@@ -61,7 +61,7 @@ class _FirstDisplayState extends State<FirstDisplay> {
                       ),
                       Container(
                         // wifiwRV (1:12)
-                        margin: EdgeInsets.fromLTRB(0, 0, 2, 0),
+                        margin: const EdgeInsets.fromLTRB(0, 0, 2, 0),
                         width: 24,
                         height: 24,
                         child: Image.network(
@@ -70,7 +70,7 @@ class _FirstDisplayState extends State<FirstDisplay> {
                           height: 24,
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         // bateraifcP (1:16)
                         width: 24,
                         height: 24,
@@ -110,11 +110,13 @@ class _FirstDisplayState extends State<FirstDisplay> {
               Positioned(
                 // ellipse5F4o (12:4)
                 left: 0,
-                top: 127,
+                top: 160,
+                right: 0,
                 child: Align(
+                  alignment: Alignment.center,
                   child: SizedBox(
-                    width: 700,
-                    height: 700,
+                    width: 409,
+                    height: 409,
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(295.5),
@@ -133,7 +135,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
               Positioned(
                 // ellipse4Vzj (12:3)
                 left: 0,
-                top: 218,
+                top: 220,
+                right: 3,
                 child: Align(
                   child: SizedBox(
                     width: 409,
@@ -188,7 +191,7 @@ class _FirstDisplayState extends State<FirstDisplay> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(128),
                         border: const Border(),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           begin: Alignment(0, -1),
                           end: Alignment(0, 1),
                           colors: <Color>[Color(0xffd1caff), Color(0xb5f7f5ff)],
@@ -210,8 +213,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(106),
-                        border: Border(),
-                        gradient: LinearGradient(
+                        border: const Border(),
+                        gradient: const LinearGradient(
                           begin: Alignment(0, -1),
                           end: Alignment(0, 1),
                           colors: <Color>[Color(0xffb8adff), Color(0xa3d3ccff)],
@@ -233,8 +236,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(86),
-                        border: Border(),
-                        gradient: LinearGradient(
+                        border: const Border(),
+                        gradient: const LinearGradient(
                           begin: Alignment(0, -1),
                           end: Alignment(0, 1),
                           colors: <Color>[Color(0xffa599f9), Color(0x8ea497ff)],
@@ -256,8 +259,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(86),
-                        border: Border(),
-                        gradient: LinearGradient(
+                        border: const Border(),
+                        gradient: const LinearGradient(
                           begin: Alignment(0, -1),
                           end: Alignment(0, 1),
                           colors: <Color>[Color(0xff8e81e4), Color(0x996f60db)],
@@ -279,8 +282,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(86),
-                        border: Border(),
-                        gradient: LinearGradient(
+                        border: const Border(),
+                        gradient: const LinearGradient(
                           begin: Alignment(0, -1),
                           end: Alignment(0, 1),
                           colors: <Color>[Color(0xff6f60db), Color(0x996f60db)],
@@ -302,8 +305,8 @@ class _FirstDisplayState extends State<FirstDisplay> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(86),
-                        border: Border.all(color: Color(0xff9e8fff)),
-                        color: Color(0xffd8d2ff),
+                        border: Border.all(color: const Color(0xff9e8fff)),
+                        color: const Color(0xffd8d2ff),
                       ),
                     ),
                   ),
@@ -321,7 +324,7 @@ class _FirstDisplayState extends State<FirstDisplay> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(86),
                         border: Border.all(color: const Color(0xff9e8fff)),
-                        color: Color(0xffb4a9ff),
+                        color: const Color(0xffb4a9ff),
                       ),
                     ),
                   ),
