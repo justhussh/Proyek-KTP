@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/first_display.dart';
-import 'package:proyek_ktp_3e/page/homepage.dart';
-import 'package:proyek_ktp_3e/page/launch_screen1.dart';
-import 'package:proyek_ktp_3e/page/login.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Home();
+    return Welcome();
   }
 }
