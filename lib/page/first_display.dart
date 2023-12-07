@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:proyek_ktp_3e/page/launch_screen1.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
@@ -17,7 +19,6 @@ class Welcome extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 0, 0)),
         useMaterial3: true,
       ),
       home: const WelcomePage(title: 'Welcome'),
@@ -34,23 +35,45 @@ class WelcomePage extends StatefulWidget {
   State<WelcomePage> createState() => WelcomePageKTP();
 }
 
-class WelcomePageKTP extends State<WelcomePage> {
+class WelcomePageKTP extends State<WelcomePage> 
+  
+  with SingleTickerProviderStateMixin{
 
   @override
+  void initState(){
+    super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+
+    Future.delayed(Duration(seconds: 2), (){
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const LaunchScreen1(),));
+    });
+  }
+
+  @override
+  void dispose(){
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    super.dispose();
+  }
+
+
+
   Widget build(BuildContext context) {
 
       return Scaffold(
       
         body: 
         Container(
+          color: Color.fromARGB(4, 255, 255, 255),
+          height: MediaQuery.of(context).size.height,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 child: Image.asset(
                   'assets/logo.png',
-                  width: 300,
-                  height: 300,
+                  width: 120,
+                  height: 120,
                 ),
               ),
             ],
