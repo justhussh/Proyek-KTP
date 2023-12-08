@@ -1,8 +1,7 @@
 import 'dart:io';
-
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 
 class Photo extends StatefulWidget {
@@ -85,10 +84,12 @@ class _PhotoState extends State<Photo> {
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset('assets/noimage.jpg')),
                 ),
+          const SizedBox(
+            height: 30,
+          ),
           GestureDetector(
             onTap: () {},
             child: Container(
-              margin: const EdgeInsets.only(top: 10),
               padding:
                   const EdgeInsets.symmetric(horizontal: 139, vertical: 20),
               decoration: BoxDecoration(
