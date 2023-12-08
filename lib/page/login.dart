@@ -6,8 +6,16 @@ void main() {
   runApp(const LoginScreen());
 }
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool? isChecked = true;
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -31,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                         height: 85,
                         width: 85,
                         image: AssetImage('assets/logo.png')),
-                    Text("Sign in",
+                    Text("Sign In",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 28)),
                     Text("We're happy to see you back again!",
@@ -86,7 +94,15 @@ class LoginScreen extends StatelessWidget {
                         // Remember Me
                         Row(
                           children: [
-                            Checkbox(value: true, onChanged: (value) {}),
+                            Checkbox(
+                              tristate: true,
+                              value: isChecked,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  isChecked = value;
+                                });
+                              },
+                            ),
                             const Text("Remember Me"),
                           ],
                         ),
@@ -123,7 +139,7 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(
-                    width: 120,
+                    width: 110,
                     height: 10,
                     image: AssetImage("assets/Vector 5.png"),
                   ),
@@ -134,7 +150,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SizedBox(width: 20),
                   Image(
-                    width: 120,
+                    width: 110,
                     height: 10,
                     image: AssetImage("assets/Vector 6.png"),
                   )
@@ -172,7 +188,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 170,
+                height: 140,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -189,7 +205,7 @@ class LoginScreen extends StatelessWidget {
                                 builder: (context) => const RegisterScreen()),
                           );
                         },
-                        child: const Text("Sign up")),
+                        child: const Text("Sign Up")),
                   ),
                 ],
               )
