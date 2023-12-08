@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
 
 void main() {
@@ -101,7 +102,12 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: FilledButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          },
                           child: const Text(
                             'Login',
                             style: TextStyle(fontSize: 16),
