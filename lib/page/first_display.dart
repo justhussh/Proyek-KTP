@@ -15,7 +15,6 @@ class Welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     // Color myColor = Color.fromRGBO(233, 238, 245, 0);
     return MaterialApp(
-      
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -35,51 +34,45 @@ class WelcomePage extends StatefulWidget {
   State<WelcomePage> createState() => WelcomePageKTP();
 }
 
-class WelcomePageKTP extends State<WelcomePage> 
-  
-  with SingleTickerProviderStateMixin{
-
+class WelcomePageKTP extends State<WelcomePage>
+    with SingleTickerProviderStateMixin {
   @override
-  void initState(){
+  void initState() {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(Duration(seconds: 2), (){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const LaunchScreen1(),));
+    Future.delayed(Duration(seconds: 4), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (_) => const LaunchScreen1(),
+      ));
     });
   }
 
   @override
-  void dispose(){
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     super.dispose();
   }
 
-
-
   Widget build(BuildContext context) {
-
-      return Scaffold(
-      
-        body: 
-        Container(
-          color: Color.fromARGB(4, 255, 255, 255),
-          height: MediaQuery.of(context).size.height,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                child: Image.asset(
-                  'assets/logo.png',
-                  width: 120,
-                  height: 120,
-                ),
-              ),
-            ],
+    return Scaffold(
+        body: Container(
+      color: Color.fromARGB(4, 255, 255, 255),
+      height: MediaQuery.of(context).size.height,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            child: Image.asset(
+              'assets/logo.png',
+              width: 120,
+              height: 120,
+            ),
           ),
-        )
-  
-    );
+        ],
+      ),
+    ));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/profile.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -344,10 +345,14 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Photo()));
+          },
           child: Icon(Icons.add),
           backgroundColor: Colors.blue,
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       ),
     );
   }
