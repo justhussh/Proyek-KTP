@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
+import 'package:http/http.dart';
 
 class Photo extends StatefulWidget {
   const Photo({super.key});
@@ -87,7 +88,10 @@ class _PhotoState extends State<Photo> {
             height: 30,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () async{
+              final bb = await get(Uri.parse("http://192.168.69.11:5000"));
+              print(bb);
+            },
             child: Container(
               padding:
                   const EdgeInsets.symmetric(horizontal: 139, vertical: 20),

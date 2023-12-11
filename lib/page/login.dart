@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
+import 'package:http/http.dart';
 
 void main() {
   runApp(const LoginScreen());
@@ -173,17 +174,23 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(color: Colors.black87),
                       )),
                   const SizedBox(width: 16),
-                  ElevatedButton.icon(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        'assets/facebook.png',
-                        width: 24,
-                        height: 24,
-                      ),
-                      label: const Text(
-                        'Facebook',
-                        style: TextStyle(color: Colors.black87),
-                      )),
+                  Container(
+                    color: Colors.red,
+                    child: ElevatedButton.icon(
+                        onPressed: () async{
+                          final response = await get(Uri.parse("http://192.168.69.11:5000"));
+                          print(response);
+                        },
+                        icon: Image.asset(
+                          'assets/facebook.png',
+                          width: 24,
+                          height: 24,
+                        ),
+                        label: const Text(
+                          'Facebook',
+                          style: TextStyle(color: Colors.black87),
+                        )),
+                  ),
                   const SizedBox(width: 16),
                 ],
               ),
