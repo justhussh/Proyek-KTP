@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/login.dart';
 
@@ -97,17 +99,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     SizedBox(
                       height: 50,
                       child: TextFormField(
+                        obscureText: true,
                         decoration: const InputDecoration(
-                            border: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.deepPurple),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(12))),
-                            prefixIcon: Icon(
-                              Icons.lock,
-                              size: 25,
-                            ),
-                            labelText: "Password"),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.deepPurple),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12))),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            size: 25,
+                          ),
+                          labelText: "Password",
+                        ),
                       ),
                     ),
                     const SizedBox(height: 10),
