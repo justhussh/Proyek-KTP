@@ -76,10 +76,8 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      textStyle: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.red
-                      ),
+                      textStyle:
+                          const TextStyle(fontSize: 20, color: Colors.red),
                     ),
                     onPressed: () {
                       Navigator.push(context,
@@ -180,7 +178,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                         SizedBox(height: 58),
                         Container(
                           child: Image.asset(
-                            'assets/card 7.png',
+                            'assets/Card 7.png',
                             alignment: Alignment(-1, -1),
                           ),
                         ),

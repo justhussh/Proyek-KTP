@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Home()));
+                                    builder: (context) => const Home()));
                           },
                           child: const Text(
                             'Login',
@@ -178,8 +178,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     color: Colors.red,
                     child: ElevatedButton.icon(
-                        onPressed: () async{
-                          final response = await get(Uri.parse("http://192.168.69.11:5000"));
+                        onPressed: () async {
+                          final response =
+                              await get(Uri.parse("http://192.168.69.11:5000"));
                           print(response);
                         },
                         icon: Image.asset(

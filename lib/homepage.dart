@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int index = 0;
   final screens = [
     HomePage(),
@@ -44,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
-                                  child: Image.network(
+                                  child: Image.asset(
                                     'assets/killua.jpg',
                                     width: 60,
                                     height: 60,
@@ -102,8 +101,7 @@ class _HomePageState extends State<HomePage> {
                                 Positioned.fill(
                                     child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: Image.network(
-                                      'assets/bg.png',
+                                  child: Image.asset('assets/bg.png',
                                       fit: BoxFit.cover),
                                 )),
                                 Column(
@@ -122,8 +120,8 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     Container(
                                       width: 200,
-                                      margin:
-                                          const EdgeInsets.only(left: 10, top: 5),
+                                      margin: const EdgeInsets.only(
+                                          left: 10, top: 5),
                                       child: const Expanded(
                                         flex: 1,
                                         child: Text(
@@ -199,130 +197,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Container(
-                        margin: const EdgeInsets.only(
-                            top:25, left: 23, right: 23),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              'Riwayat Vaildasi',
-                              style: TextStyle(
-                                fontSize: 13,
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: const Text('See All',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      decoration: TextDecoration.underline)),
-                            )
-                          ],
-                        ),
-                      ),
-                      const Divider(),
-                      ListTile(
-                        title: Text('35542442'),
-                        subtitle: Text('Devano Abew'),
-                        leading: Icon(
-                          Icons.person,
-                        ),
-                        trailing: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                    color: Colors.blueGrey.withOpacity(0.2))
-                              ]),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 8, vertical: 1),
-                                child: Text(
-                                  'Valid',
-                                  style: TextStyle(
-                                      color: Colors.lightGreen,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 6),
-                            Text(
-                              '13/12/2023',
-                              style: TextStyle(fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                      const Divider(),
-                      ListTile(
-                        title: Text('35542442'),
-                        subtitle: Text('Devano Abew'),
-                        leading: Icon(
-                          Icons.person,
-                        ),
-                        trailing: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                    color: Colors.blueGrey.withOpacity(0.2))
-                              ]),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 8, vertical: 1),
-                                child: Text(
-                                  'Valid',
-                                  style: TextStyle(
-                                      color: Colors.lightGreen,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 6),
-                            Text(
-                              '13/12/2023',
-                              style: TextStyle(fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
-                      Divider(),
-                      ListTile(
-                        title: Text('35542442'),
-                        subtitle: Text('Devano Abew'),
-                        leading: Icon(
-                          Icons.person,
-                        ),
-                        trailing: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(boxShadow: [
-                                BoxShadow(
-                                    color: Colors.blueGrey.withOpacity(0.2))
-                              ]),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 8, vertical: 1),
-                                child: Text(
-                                  'Valid',
-                                  style: TextStyle(
-                                      color: Colors.lightGreen,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 6),
-                            Text(
-                              '13/12/2023',
-                              style: TextStyle(fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                   Positioned(
@@ -340,125 +214,119 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
+        // //nabar
+        //   bottomNavigationBar: SalomonBottomBar(
+        // currentIndex: _currentIndex,
+        // onTap: (i) => _onItemTapped(context, i),
+        // items: [
+        //   SalomonBottomBarItem(
+        //     icon: const Icon(Icons.home),
+        //     title: const Text("Home"),
+        //     selectedColor: Colors.purple,
+        //   ),
+        //   SalomonBottomBarItem(
+        //     icon: const Icon(Icons.person),
+        //     title: const Text("Profile"),
+        //     selectedColor: Colors.teal,
+        //   ),
+        // ],
+        //   ),
 
+        //   //floating
+        //   floatingActionButton: FloatingActionButton(
+        // onPressed: () {
+        //   Navigator.push(
+        //       context, MaterialPageRoute(builder: (context) => Photo()));
+        // },
+        //     child: Icon(Icons.add),
+        //     backgroundColor: Colors.blue,
+        //   ),
 
-      // //nabar
-      //   bottomNavigationBar: SalomonBottomBar(
-          // currentIndex: _currentIndex,
-          // onTap: (i) => _onItemTapped(context, i),
-          // items: [
-          //   SalomonBottomBarItem(
-          //     icon: const Icon(Icons.home),
-          //     title: const Text("Home"),
-          //     selectedColor: Colors.purple,
-          //   ),
-          //   SalomonBottomBarItem(
-          //     icon: const Icon(Icons.person),
-          //     title: const Text("Profile"),
-          //     selectedColor: Colors.teal,
-          //   ),
-          // ],
-      //   ),
+        //   floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
 
-      //   //floating
-      //   floatingActionButton: FloatingActionButton(
-          // onPressed: () {
-          //   Navigator.push(
-          //       context, MaterialPageRoute(builder: (context) => Photo()));
-          // },
-      //     child: Icon(Icons.add),
-      //     backgroundColor: Colors.blue,
-      //   ),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        // floatingActionButton: Padding(
+        //   padding: EdgeInsets.only(top: 8.0), // Pergeseran ke bawah
+        //   child: Container(
+        //       width: 50.0, // Atur lebar tombol
+        //       height: 50.0, // Atur tinggi tombol
+        //       decoration: BoxDecoration(
+        //         border: Border.all(color: const Color.fromARGB(255, 255, 255, 255), width: 3, style: BorderStyle.solid),
+        //         borderRadius: BorderRadius.circular(19),
+        //         boxShadow: [
+        //           BoxShadow(
+        //             color: Color.fromARGB(255, 181, 181, 181).withOpacity(0.5),
+        //             spreadRadius: 1,
+        //             blurRadius: 3,
+        //             offset: Offset(0, 2.5), // posisi bayangan
+        //           ),
+        //         ],
+        //       ),
+        //       child: FloatingActionButton(
+        //         onPressed: () {
+        //           Navigator.push(
+        //               context, MaterialPageRoute(builder: (context) => Photo()));
+        //         },
+        //         backgroundColor: Colors.red,
+        //         child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 34),
+        //       ),
+        //     ),
+        // ),
 
-      //   floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        // bottomNavigationBar: NavigationBarTheme(
+        //   data: NavigationBarThemeData(
+        //     indicatorColor: Color.fromARGB(0, 255, 0, 0),
+        //     labelTextStyle: MaterialStateProperty.all(
+        //       TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500, height: -0.04),
+        //     ),
+        //     shadowColor: Colors.black
+        //   ),
+        //   child: NavigationBar(
+        //     // currentIndex: _currentIndex,
+        //     // onTap: (i) => _onItemTapped(context, i),
+        //     // items: [
 
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // floatingActionButton: Padding(
-      //   padding: EdgeInsets.only(top: 8.0), // Pergeseran ke bawah
-      //   child: Container(
-      //       width: 50.0, // Atur lebar tombol
-      //       height: 50.0, // Atur tinggi tombol
-      //       decoration: BoxDecoration(
-      //         border: Border.all(color: const Color.fromARGB(255, 255, 255, 255), width: 3, style: BorderStyle.solid),
-      //         borderRadius: BorderRadius.circular(19),
-      //         boxShadow: [
-      //           BoxShadow(
-      //             color: Color.fromARGB(255, 181, 181, 181).withOpacity(0.5),
-      //             spreadRadius: 1,
-      //             blurRadius: 3,
-      //             offset: Offset(0, 2.5), // posisi bayangan
-      //           ),
-      //         ], 
-      //       ),
-      //       child: FloatingActionButton(
-      //         onPressed: () {
-      //           Navigator.push(
-      //               context, MaterialPageRoute(builder: (context) => Photo()));
-      //         },
-      //         backgroundColor: Colors.red,
-      //         child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 34),
-      //       ),
-      //     ),
-      // ),
+        //     //   SalomonBottomBarItem(
+        //     //     icon: const Icon(Icons.home),
+        //     //     title: const Text("Home"),
+        //     //     selectedColor: Colors.purple,
+        //     //   ),
+        //     //   SalomonBottomBarItem(
+        //     //     icon: const Icon(Icons.person),
+        //     //     title: const Text("Profile"),
+        //     //     selectedColor: Colors.teal,
+        //     //   ),
+        //     // ],
 
-      // bottomNavigationBar: NavigationBarTheme(
-      //   data: NavigationBarThemeData(
-      //     indicatorColor: Color.fromARGB(0, 255, 0, 0),
-      //     labelTextStyle: MaterialStateProperty.all(
-      //       TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500, height: -0.04),
-      //     ),
-      //     shadowColor: Colors.black
-      //   ),
-      //   child: NavigationBar(
-      //     // currentIndex: _currentIndex,
-      //     // onTap: (i) => _onItemTapped(context, i),
-      //     // items: [
-
-      //     //   SalomonBottomBarItem(
-      //     //     icon: const Icon(Icons.home),
-      //     //     title: const Text("Home"),
-      //     //     selectedColor: Colors.purple,
-      //     //   ),
-      //     //   SalomonBottomBarItem(
-      //     //     icon: const Icon(Icons.person),
-      //     //     title: const Text("Profile"),
-      //     //     selectedColor: Colors.teal,
-      //     //   ),
-      //     // ],
-
-      //     onDestinationSelected:  (index) =>
-      //       setState(() => this.index = index),
-      //     height: 72,
-      //     selectedIndex: index,
-      //     backgroundColor: Color.fromARGB(255, 255, 255, 255),
-      //     destinations: [
-      //       Container(
-      //         margin: EdgeInsets.only(bottom: 20),
-      //         child: NavigationDestination(
-      //             icon: Icon(Icons.home, size: 32),
-      //             selectedIcon: Icon(Icons.home, size: 32, color: Colors.red,), 
-      //             label: 'Home',
-      //           ),
-      //       ),
-      //       Container(
-      //         alignment:Alignment.center,
-      //         margin: EdgeInsets.only(top: 14),
-      //         child: Text("Scan", style: TextStyle(fontSize:11.5,color:const Color.fromARGB(255, 0, 0, 0),fontWeight: FontWeight.w500))
-      //       ),
-      //       Container(
-      //         margin: EdgeInsets.only(bottom: 20),
-      //         child: NavigationDestination(
-      //             icon: Icon(Icons.inbox, size: 32), 
-      //             label: 'Riwayat',
-      //           ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
-
-  
-
-
+        //     onDestinationSelected:  (index) =>
+        //       setState(() => this.index = index),
+        //     height: 72,
+        //     selectedIndex: index,
+        //     backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        //     destinations: [
+        //       Container(
+        //         margin: EdgeInsets.only(bottom: 20),
+        //         child: NavigationDestination(
+        //             icon: Icon(Icons.home, size: 32),
+        //             selectedIcon: Icon(Icons.home, size: 32, color: Colors.red,),
+        //             label: 'Home',
+        //           ),
+        //       ),
+        //       Container(
+        //         alignment:Alignment.center,
+        //         margin: EdgeInsets.only(top: 14),
+        //         child: Text("Scan", style: TextStyle(fontSize:11.5,color:const Color.fromARGB(255, 0, 0, 0),fontWeight: FontWeight.w500))
+        //       ),
+        //       Container(
+        //         margin: EdgeInsets.only(bottom: 20),
+        //         child: NavigationDestination(
+        //             icon: Icon(Icons.inbox, size: 32),
+        //             label: 'Riwayat',
+        //           ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
