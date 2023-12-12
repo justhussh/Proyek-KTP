@@ -50,7 +50,7 @@ class _PhotoState extends State<Photo> {
         body: Column(children: [
           Center(
             child: Container(
-              margin: const EdgeInsets.only(top: 15),
+              margin: const EdgeInsets.only(top: 7),
               constraints: const BoxConstraints(maxWidth: 300),
               child: Text(
                 'Point the camera at the card you want to verify, make sure the image is clear',
@@ -66,15 +66,15 @@ class _PhotoState extends State<Photo> {
           _selectedImages != null
               ? Center(
                   child: Container(
-                      height: 400,
+                      height: 500,
                       width: 330,
                       margin: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 15),
+                          horizontal: 15, vertical: 5),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.file(
                           _selectedImages!,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                         ),
                       )),
                 )
