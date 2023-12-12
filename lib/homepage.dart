@@ -15,11 +15,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int index = 0;
   final screens = [
-    HomePage(),
-    Scan(),
-    SewaPage(),
+    const HomePage(),
+    const Scan(),
+    const SewaPage(),
   ];
-  var _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -330,27 +329,5 @@ class _HomePageState extends State<HomePage> {
         // ),
       ),
     );
-  }
-
-  Widget _getPage(int index) {
-    switch (index) {
-      case 0:
-        return const HomePage();
-      case 1:
-        return const Profile();
-      default:
-        return const HomePage();
-    }
-  }
-
-  void _onItemTapped(BuildContext context, int index) {
-    setState(() {
-      _currentIndex = index;
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => _getPage(index),
-        ),
-      );
-    });
   }
 }
