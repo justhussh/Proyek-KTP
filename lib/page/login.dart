@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
+import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
 import 'package:http/http.dart';
 
@@ -123,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                                    builder: (context) => Home()));
                           },
                           child: const Text(
                             'Login',

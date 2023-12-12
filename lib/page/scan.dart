@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
 
@@ -17,23 +18,37 @@ class _ScanState extends State<Scan> {
       home: Scaffold(
         appBar: AppBar(
             title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            const HomePage())); // Navigate back to the previous screen
-              },
-            ),
-            const Text(
-              'Step by Step',
-              style: TextStyle(fontSize: 23),
-            ),
-          ],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const Home())); // Navigate back to the previous screen
+                    },
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: const Text(
+                    'Step by Step',
+                    style: TextStyle(fontSize: 23),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    icon: const Icon(Icons.info),
+                    onPressed: () {
+                    },
+                  ),
+                ),
+              ],
         )),
         body: Column(
           children: [

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
+import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
@@ -77,11 +78,12 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                     style: TextButton.styleFrom(
                       textStyle: const TextStyle(
                         fontSize: 20,
+                        color: Colors.red
                       ),
                     ),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                          MaterialPageRoute(builder: (context) => Home()));
                     },
                     child: Container(
                       margin: EdgeInsets.only(right: 20),

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -90,7 +91,7 @@ class _PhotoState extends State<Photo> {
           GestureDetector(
             onTap: () async{
               final bb = await get(Uri.parse("http://192.168.69.11:5000"));
-              print(bb);
+              print(json.decode(bb.body));
             },
             child: Container(
               padding:

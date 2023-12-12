@@ -12,7 +12,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  int index = 0;
+  final screens = [
+    HomePage(),
+    Scan(),
+    Scan(),
+  ];
   var _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(left: 12),
+                        margin: const EdgeInsets.only(left: 23, right: 18),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -37,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
                                   child: Image.network(
-                                    'https://www.greenscene.co.id/wp-content/uploads/2021/09/Sukuna.jpg',
+                                    'assets/killua.jpg',
                                     width: 60,
                                     height: 60,
                                     fit: BoxFit.cover,
@@ -81,60 +89,63 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      Container(
-                        width: 345,
-                        height: 200,
-                        margin: const EdgeInsets.only(top: 18),
-                        child: Card(
-                          elevation: 7,
-                          child: Stack(
-                            children: [
-                              Positioned.fill(
-                                  child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.network(
-                                    'https://wallpaperaccess.com/full/1489205.jpg',
-                                    fit: BoxFit.cover),
-                              )),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(
-                                        top: 40, left: 10),
-                                    child: const Text(
-                                      'Camps Scanner',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w800),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 200,
-                                    margin:
-                                        const EdgeInsets.only(left: 10, top: 5),
-                                    child: const Expanded(
-                                      flex: 1,
-                                      child: Text(
-                                        'Scan Your KTP, KTM, or Other Identity Card.',
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Container(
+                          width: 325,
+                          height: 200,
+                          margin: const EdgeInsets.only(top: 18),
+                          child: Card(
+                            elevation: 7,
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                    child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Image.network(
+                                      'assets/bg.png',
+                                      fit: BoxFit.cover),
+                                )),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: const EdgeInsets.only(
+                                          top: 40, left: 10),
+                                      child: const Text(
+                                        'Camps Scanner',
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w300),
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.w800),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    Container(
+                                      width: 200,
+                                      margin:
+                                          const EdgeInsets.only(left: 10, top: 5),
+                                      child: const Expanded(
+                                        flex: 1,
+                                        child: Text(
+                                          'Scan Your KTP, KTM, or Other Identity Card.',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w300),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       Container(
                         height: 90,
                         margin:
-                            const EdgeInsets.only(left: 10, right: 10, top: 25),
+                            const EdgeInsets.only(left: 20, right: 20, top: 20),
                         child: Card(
                           elevation: 1,
                           shadowColor: Colors.lightBlueAccent.withOpacity(0.8),
@@ -189,8 +200,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 5),
+                        margin: const EdgeInsets.only(
+                            top:25, left: 23, right: 23),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -328,31 +339,126 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        bottomNavigationBar: SalomonBottomBar(
-          currentIndex: _currentIndex,
-          onTap: (i) => _onItemTapped(context, i),
-          items: [
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.home),
-              title: const Text("Home"),
-              selectedColor: Colors.purple,
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.person),
-              title: const Text("Profile"),
-              selectedColor: Colors.teal,
-            ),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Photo()));
-          },
-          child: Icon(Icons.add),
-          backgroundColor: Colors.blue,
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+
+
+      // //nabar
+      //   bottomNavigationBar: SalomonBottomBar(
+          // currentIndex: _currentIndex,
+          // onTap: (i) => _onItemTapped(context, i),
+          // items: [
+          //   SalomonBottomBarItem(
+          //     icon: const Icon(Icons.home),
+          //     title: const Text("Home"),
+          //     selectedColor: Colors.purple,
+          //   ),
+          //   SalomonBottomBarItem(
+          //     icon: const Icon(Icons.person),
+          //     title: const Text("Profile"),
+          //     selectedColor: Colors.teal,
+          //   ),
+          // ],
+      //   ),
+
+      //   //floating
+      //   floatingActionButton: FloatingActionButton(
+          // onPressed: () {
+          //   Navigator.push(
+          //       context, MaterialPageRoute(builder: (context) => Photo()));
+          // },
+      //     child: Icon(Icons.add),
+      //     backgroundColor: Colors.blue,
+      //   ),
+
+      //   floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: Padding(
+      //   padding: EdgeInsets.only(top: 8.0), // Pergeseran ke bawah
+      //   child: Container(
+      //       width: 50.0, // Atur lebar tombol
+      //       height: 50.0, // Atur tinggi tombol
+      //       decoration: BoxDecoration(
+      //         border: Border.all(color: const Color.fromARGB(255, 255, 255, 255), width: 3, style: BorderStyle.solid),
+      //         borderRadius: BorderRadius.circular(19),
+      //         boxShadow: [
+      //           BoxShadow(
+      //             color: Color.fromARGB(255, 181, 181, 181).withOpacity(0.5),
+      //             spreadRadius: 1,
+      //             blurRadius: 3,
+      //             offset: Offset(0, 2.5), // posisi bayangan
+      //           ),
+      //         ], 
+      //       ),
+      //       child: FloatingActionButton(
+      //         onPressed: () {
+      //           Navigator.push(
+      //               context, MaterialPageRoute(builder: (context) => Photo()));
+      //         },
+      //         backgroundColor: Colors.red,
+      //         child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 34),
+      //       ),
+      //     ),
+      // ),
+
+      // bottomNavigationBar: NavigationBarTheme(
+      //   data: NavigationBarThemeData(
+      //     indicatorColor: Color.fromARGB(0, 255, 0, 0),
+      //     labelTextStyle: MaterialStateProperty.all(
+      //       TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500, height: -0.04),
+      //     ),
+      //     shadowColor: Colors.black
+      //   ),
+      //   child: NavigationBar(
+      //     // currentIndex: _currentIndex,
+      //     // onTap: (i) => _onItemTapped(context, i),
+      //     // items: [
+
+      //     //   SalomonBottomBarItem(
+      //     //     icon: const Icon(Icons.home),
+      //     //     title: const Text("Home"),
+      //     //     selectedColor: Colors.purple,
+      //     //   ),
+      //     //   SalomonBottomBarItem(
+      //     //     icon: const Icon(Icons.person),
+      //     //     title: const Text("Profile"),
+      //     //     selectedColor: Colors.teal,
+      //     //   ),
+      //     // ],
+
+      //     onDestinationSelected:  (index) =>
+      //       setState(() => this.index = index),
+      //     height: 72,
+      //     selectedIndex: index,
+      //     backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      //     destinations: [
+      //       Container(
+      //         margin: EdgeInsets.only(bottom: 20),
+      //         child: NavigationDestination(
+      //             icon: Icon(Icons.home, size: 32),
+      //             selectedIcon: Icon(Icons.home, size: 32, color: Colors.red,), 
+      //             label: 'Home',
+      //           ),
+      //       ),
+      //       Container(
+      //         alignment:Alignment.center,
+      //         margin: EdgeInsets.only(top: 14),
+      //         child: Text("Scan", style: TextStyle(fontSize:11.5,color:const Color.fromARGB(255, 0, 0, 0),fontWeight: FontWeight.w500))
+      //       ),
+      //       Container(
+      //         margin: EdgeInsets.only(bottom: 20),
+      //         child: NavigationDestination(
+      //             icon: Icon(Icons.inbox, size: 32), 
+      //             label: 'Riwayat',
+      //           ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
+  
+
+
       ),
     );
   }
