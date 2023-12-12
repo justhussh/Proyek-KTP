@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/profile.dart';
 
 class DataSewa extends StatefulWidget {
-  const DataSewa({super.key});
+  const DataSewa({super.key, required this.mobil});
+  final DaftarMobil mobil;
 
   @override
   State<DataSewa> createState() => _DataSewaState();
@@ -11,8 +13,21 @@ class DataSewa extends StatefulWidget {
 
 class _DataSewaState extends State<DataSewa> {
   int index = 0;
+  final TextEditingController _mobilController = TextEditingController();
+  final TextEditingController _hargaController = TextEditingController();
+  final TextEditingController _statusController = TextEditingController();
+  final TextEditingController _seatController = TextEditingController();
 
-  var _currentIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+
+    // Set initial values for controllers
+    _mobilController.text = widget.mobil.merk;
+    _hargaController.text = widget.mobil.harga;
+    _statusController.text = widget.mobil.avail;
+    _seatController.text = widget.mobil.seat;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +134,7 @@ class _DataSewaState extends State<DataSewa> {
                           SizedBox(
                             height: 40,
                             child: TextFormField(
+                              controller: _mobilController,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius:
@@ -139,6 +155,7 @@ class _DataSewaState extends State<DataSewa> {
                           SizedBox(
                             height: 40,
                             child: TextFormField(
+                              controller: _hargaController,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius:
@@ -159,6 +176,7 @@ class _DataSewaState extends State<DataSewa> {
                           SizedBox(
                             height: 40,
                             child: TextFormField(
+                              controller: _statusController,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius:
@@ -179,6 +197,7 @@ class _DataSewaState extends State<DataSewa> {
                           SizedBox(
                             height: 40,
                             child: TextFormField(
+                              controller: _seatController,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(
                                     borderRadius:
@@ -335,27 +354,5 @@ class _DataSewaState extends State<DataSewa> {
         ),
       ),
     );
-  }
-
-  Widget _getPage(int index) {
-    switch (index) {
-      case 0:
-        return const DataSewa();
-      case 1:
-        return const Profile();
-      default:
-        return const DataSewa();
-    }
-  }
-
-  void _onItemTapped(BuildContext context, int index) {
-    setState(() {
-      _currentIndex = index;
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => _getPage(index),
-        ),
-      );
-    });
   }
 }

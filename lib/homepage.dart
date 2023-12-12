@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/profile.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
+import 'package:proyek_ktp_3e/page/sewapage.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   final screens = [
     HomePage(),
     Scan(),
-    Scan(),
+    SewaPage(),
   ];
   var _currentIndex = 0;
 

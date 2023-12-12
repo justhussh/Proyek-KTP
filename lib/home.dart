@@ -4,6 +4,7 @@ import 'package:proyek_ktp_3e/page/profile.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/dataSewa.dart';
+import 'package:proyek_ktp_3e/page/sewapage.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,7 +18,7 @@ class _Home extends State<Home> {
   final screens = [
     HomePage(),
     Scan(),
-    DataSewa(),
+    SewaPage(),
   ];
   var _currentIndex = 0;
 
