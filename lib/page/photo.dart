@@ -89,7 +89,7 @@ class _PhotoState extends State<Photo> {
             height: 30,
           ),
           GestureDetector(
-            onTap: () async{
+            onTap: () async {
               final bb = await get(Uri.parse("http://192.168.69.11:5000"));
               print(json.decode(bb.body));
             },

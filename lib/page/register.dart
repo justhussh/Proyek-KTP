@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/login.dart';
-import 'package:proyek_ktp_3e/page/opt.dart';
 
 void main() {
   runApp(const RegisterScreen());
@@ -144,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const OptScreen()),
+                                  builder: (context) => const LoginScreen()),
                             );
                           },
                           child: const Text(

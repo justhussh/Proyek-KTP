@@ -3,6 +3,7 @@ import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/profile.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
+import 'package:proyek_ktp_3e/page/dataSewa.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,7 +17,7 @@ class _Home extends State<Home> {
   final screens = [
     HomePage(),
     Scan(),
-    Scan(),
+    DataSewa(),
   ];
   var _currentIndex = 0;
 
@@ -78,7 +79,7 @@ class _Home extends State<Home> {
                   selectedIcon: Icon(
                     Icons.home,
                     size: 32,
-                    color: Colors.red,
+                    color: Color.fromRGBO(105, 94, 182, 30),
                   ),
                   label: 'Home',
                 ),
@@ -94,8 +95,13 @@ class _Home extends State<Home> {
               Container(
                 margin: EdgeInsets.only(bottom: 20),
                 child: NavigationDestination(
-                  icon: Icon(Icons.inbox, size: 32),
-                  label: 'Riwayat',
+                  icon: Icon(Icons.person_2_outlined, size: 32),
+                  selectedIcon: Icon(
+                    Icons.person_2_outlined,
+                    size: 32,
+                    color: Color.fromRGBO(105, 94, 182, 30),
+                  ),
+                  label: 'Sewa',
                 ),
               ),
             ],

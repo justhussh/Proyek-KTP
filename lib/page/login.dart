@@ -176,7 +176,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       )),
                   const SizedBox(width: 16),
                   Container(
-                    color: Colors.red,
                     child: ElevatedButton.icon(
                         onPressed: () async {
                           final response =
