@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/profile.dart';
+import 'package:proyek_ktp_3e/page/sewapage.dart';
 
 class DataSewa extends StatefulWidget {
   const DataSewa({super.key, required this.mobil});
@@ -48,21 +49,29 @@ class _DataSewaState extends State<DataSewa> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          Container(
+                            margin: const EdgeInsets.only(right: 15),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SewaPage()));
+                              },
+                              child: Icon(
+                                Icons.arrow_back,
+                                size: 35,
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ),
                           Row(
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.asset(
-                                  'assets/killua.jpg',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
                               Container(
-                                margin: const EdgeInsets.only(left: 15),
+                                margin:
+                                    const EdgeInsets.only(left: 15, right: 15),
                                 child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Container(
                                       margin: const EdgeInsets.only(
@@ -83,15 +92,16 @@ class _DataSewaState extends State<DataSewa> {
                                   ],
                                 ),
                               ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.asset(
+                                  'assets/killua.jpg',
+                                  width: 60,
+                                  height: 60,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
                             ],
-                          ),
-                          Container(
-                            margin: const EdgeInsets.only(right: 15),
-                            child: const Icon(
-                              Icons.notifications_outlined,
-                              size: 35,
-                              color: Colors.blue,
-                            ),
                           ),
                         ],
                       ),

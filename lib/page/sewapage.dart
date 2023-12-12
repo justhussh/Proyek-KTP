@@ -21,14 +21,6 @@ class _SewaPageState extends State<SewaPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                margin: const EdgeInsets.only(right: 15),
-                child: const Icon(
-                  Icons.arrow_back,
-                  size: 35,
-                  color: Colors.blue,
-                ),
-              ),
-              Container(
                 margin: const EdgeInsets.only(left: 23, right: 18),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,6 +60,14 @@ class _SewaPageState extends State<SewaPage> {
                           ),
                         ),
                       ],
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(right: 15),
+                      child: const Icon(
+                        Icons.notifications_outlined,
+                        size: 35,
+                        color: Colors.blue,
+                      ),
                     ),
                   ],
                 ),
