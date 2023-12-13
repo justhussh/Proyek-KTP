@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/home.dart';
-import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
 
 class Scan extends StatefulWidget {

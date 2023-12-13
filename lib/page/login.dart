@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
 import 'package:http/http.dart';
@@ -74,7 +73,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 50,
                       child: TextFormField(
-                        obscureText: true,
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(
                                 borderSide:
@@ -125,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Home()));
+                                    builder: (context) => Home()));
                           },
                           child: const Text(
                             'Login',
@@ -162,38 +160,46 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 20),
               // Footer
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ElevatedButton.icon(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        'assets/google.png',
-                        width: 24,
-                        height: 24,
-                      ),
-                      label: const Text(
-                        'Google',
-                        style: TextStyle(color: Colors.black87),
-                      )),
-                  const SizedBox(width: 16),
                   Container(
                     child: ElevatedButton.icon(
-                        onPressed: () async {
-                          final response =
-                              await get(Uri.parse("http://192.168.69.11:5000"));
-                          print(response);
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'assets/google.png',
+                          width: 24,
+                          height: 24,
+                        ),
+                        label: Padding(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          child: const Text(
+                            'Google',
+                            style: TextStyle(color: Colors.black87),
+                          ),
+                        )),
+                  ),
+                  // const SizedBox(width: 16),
+                  Container(
+                    child: ElevatedButton.icon(
+                        onPressed: () {
+                          // final response = await get(Uri.parse("http://192.168.69.11:5000"));
+                          // print(response);
                         },
                         icon: Image.asset(
                           'assets/facebook.png',
                           width: 24,
                           height: 24,
                         ),
-                        label: const Text(
-                          'Facebook',
-                          style: TextStyle(color: Colors.black87),
-                        )),
+                        label: Padding(
+                          padding: const EdgeInsets.only(left: 18, right: 18),
+                          child: const Text(
+                            'Facebook',
+                            style: TextStyle(color: Colors.black87),
+                          ),
+                        )
+                    ),
                   ),
-                  const SizedBox(width: 16),
+
                 ],
               ),
               const SizedBox(

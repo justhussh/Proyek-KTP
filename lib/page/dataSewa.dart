@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
-import 'package:proyek_ktp_3e/page/profile.dart';
 import 'package:proyek_ktp_3e/page/sewapage.dart';
 
 class DataSewa extends StatefulWidget {
