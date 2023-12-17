@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
+import 'package:proyek_ktp_3e/home.dart';
+import 'package:proyek_ktp_3e/homepage.dart';
 import 'package:proyek_ktp_3e/page/dataSewa.dart';
 
 class SewaPage extends StatefulWidget {
@@ -25,21 +27,28 @@ class _SewaPageState extends State<SewaPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 15),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Home()));
+                        },
+                        child: Icon(
+                          Icons.arrow_back,
+                          size: 35,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
                     Row(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            'assets/killua.jpg',
-                            width: 60,
-                            height: 60,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
                         Container(
-                          margin: const EdgeInsets.only(left: 15),
+                          margin: const EdgeInsets.only(left: 15, right: 15),
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Container(
                                 margin:
@@ -59,15 +68,16 @@ class _SewaPageState extends State<SewaPage> {
                             ],
                           ),
                         ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/killua.jpg',
+                            width: 60,
+                            height: 60,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ],
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(right: 15),
-                      child: const Icon(
-                        Icons.notifications_outlined,
-                        size: 35,
-                        color: Colors.blue,
-                      ),
                     ),
                   ],
                 ),
