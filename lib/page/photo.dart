@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 class Photo extends StatefulWidget {
   const Photo({super.key});
@@ -92,8 +92,16 @@ class _PhotoState extends State<Photo> {
             ),
             GestureDetector(
               onTap: () async {
-                final bb = await get(Uri.parse("http://192.168.69.11:5000"));
-                print(json.decode(bb.body));
+                final url = Uri.parse('http://192.168.1.212:5000/read');
+                var request = http.MultipartRequest('POST', url);
+
+                http.MultipartFile multipartFile =
+                    await http.MultipartFile.fromPath(
+                        'image_file', _selectedImages!.path);
+                request.files.add(multipartFile);
+
+                final response = await request.send();
+                print(response.statusCode);
               },
               child: Container(
                 padding:
