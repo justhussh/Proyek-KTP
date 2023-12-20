@@ -145,7 +145,8 @@ class _PhotoState extends State<Photo> {
   }
 
   Future _pickIMage(ImageSource source) async {
-    final returnedImage = await ImagePicker().pickImage(source: source);
+    final returnedImage =
+        await ImagePicker().pickImage(source: source, imageQuality: 100);
     if (returnedImage == null) return;
     setState(() {
       _selectedImages = File(returnedImage.path);
