@@ -31,13 +31,13 @@ var daftarMobilList = [
       seat: '3',
       harga: 'Rp. 50.000,00',
       merk: 'Bajaj Bikes',
-      avail: 'Kosong'),
+      avail: 'Tersedia'),
   DaftarMobil(
       imageAsset: 'assets/ferrari.jpeg',
       seat: '2',
       harga: 'Rp. 450.000,00',
       merk: 'Ferrari SF90 Stradale',
-      avail: 'Kosong'),
+      avail: 'Tersedia'),
   DaftarMobil(
       imageAsset: 'assets/lambo.jpeg',
       seat: '2',

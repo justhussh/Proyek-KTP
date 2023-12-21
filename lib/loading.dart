@@ -23,7 +23,7 @@ class _LoadingState extends State<Loading> {
             Center(
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.of(context).pop();
                 },
                 child: Container(
                   height: 200,

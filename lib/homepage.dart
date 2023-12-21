@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyek_ktp_3e/page/sewapage.dart';
+import 'package:proyek_ktp_3e/page/photo.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,7 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int index = 0;
 
   @override
@@ -71,11 +70,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                             Container(
                               margin: const EdgeInsets.only(right: 10),
-                              child: const Icon(
-                                Icons.notifications_outlined,
-                                size: 35,
-                                color: Color.fromARGB(255, 84, 0, 168)
-                              ),
+                              child: const Icon(Icons.notifications_outlined,
+                                  size: 35,
+                                  color: Color.fromARGB(255, 84, 0, 168)),
                             ),
                           ],
                         ),
@@ -93,8 +90,7 @@ class _HomePageState extends State<HomePage> {
                                 Positioned.fill(
                                     child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                      'assets/bg.png',
+                                  child: Image.asset('assets/bg.png',
                                       fit: BoxFit.cover),
                                 )),
                                 Column(
@@ -113,8 +109,8 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     Container(
                                       width: 200,
-                                      margin:
-                                          const EdgeInsets.only(left: 20, top: 5),
+                                      margin: const EdgeInsets.only(
+                                          left: 20, top: 5),
                                       child: const Expanded(
                                         flex: 1,
                                         child: Text(
@@ -153,7 +149,8 @@ class _HomePageState extends State<HomePage> {
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
-                                          color: Color.fromARGB(255, 84, 0, 168)),
+                                          color:
+                                              Color.fromARGB(255, 84, 0, 168)),
                                     ),
                                     Text(
                                       'Scan Your Card',
@@ -168,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => SewaPage()));
+                                          builder: (context) => Photo()));
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 19),
@@ -189,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                      ), 
+                      ),
                       Container(
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
@@ -204,25 +201,29 @@ class _HomePageState extends State<HomePage> {
                                       child: Stack(
                                         children: [
                                           Positioned.fill(
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(15),
-                                              child: Image.asset(
-                                                  'assets/Rectangle 48.png',
-                                                  fit: BoxFit.cover),
-                                            )
-                                          ),
+                                              child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(15),
+                                            child: Image.asset(
+                                                'assets/Rectangle 48.png',
+                                                fit: BoxFit.cover),
+                                          )),
                                           Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 margin: const EdgeInsets.only(
-                                                    top: 20, left: 20, right: 20),
+                                                    top: 20,
+                                                    left: 20,
+                                                    right: 20),
                                                 child: const Text(
                                                   'Temukan kemudahan dan kenyamanan dalam penyewaan dengan aplikasi',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 18,
-                                                      fontWeight: FontWeight.w800),
+                                                      fontWeight:
+                                                          FontWeight.w800),
                                                 ),
                                               ),
                                             ],
@@ -241,36 +242,44 @@ class _HomePageState extends State<HomePage> {
                                           child: Stack(
                                             children: [
                                               Positioned.fill(
-                                                child: ClipRRect(
-                                                  borderRadius: BorderRadius.circular(15),
-                                                  child: Image.asset(
-                                                      'assets/Rectangle 48.png',
-                                                      fit: BoxFit.cover),
-                                                )
-                                              ),
+                                                  child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                child: Image.asset(
+                                                    'assets/Rectangle 48.png',
+                                                    fit: BoxFit.cover),
+                                              )),
                                               Column(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
-                                                    margin: const EdgeInsets.only(
-                                                        top: 20, left: 28, right: 20),
+                                                    margin:
+                                                        const EdgeInsets.only(
+                                                            top: 20,
+                                                            left: 28,
+                                                            right: 20),
                                                     child: const Text(
                                                       'Riwayat',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 18,
-                                                          fontWeight: FontWeight.w800),
+                                                          fontWeight:
+                                                              FontWeight.w800),
                                                     ),
                                                   ),
                                                   Container(
-                                                    margin: const EdgeInsets.only(
-                                                        left: 35, right: 20),
+                                                    margin:
+                                                        const EdgeInsets.only(
+                                                            left: 35,
+                                                            right: 20),
                                                     child: const Text(
                                                       '8',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 46,
-                                                          fontWeight: FontWeight.w800),
+                                                          fontWeight:
+                                                              FontWeight.w800),
                                                     ),
                                                   ),
                                                 ],
@@ -279,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                       ),
-                                       SizedBox(height: 18),
+                                      SizedBox(height: 18),
                                       Container(
                                         width: 130,
                                         height: 138,
@@ -287,36 +296,44 @@ class _HomePageState extends State<HomePage> {
                                           child: Stack(
                                             children: [
                                               Positioned.fill(
-                                                child: ClipRRect(
-                                                  borderRadius: BorderRadius.circular(15),
-                                                  child: Image.asset(
-                                                      'assets/Rectangle 48.png',
-                                                      fit: BoxFit.cover),
-                                                )
-                                              ),
+                                                  child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                child: Image.asset(
+                                                    'assets/Rectangle 48.png',
+                                                    fit: BoxFit.cover),
+                                              )),
                                               Column(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
                                                 children: [
                                                   Container(
-                                                    margin: const EdgeInsets.only(
-                                                        top: 20, left: 35, right: 20),
+                                                    margin:
+                                                        const EdgeInsets.only(
+                                                            top: 20,
+                                                            left: 35,
+                                                            right: 20),
                                                     child: const Text(
                                                       'Mobil',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 18,
-                                                          fontWeight: FontWeight.w800),
+                                                          fontWeight:
+                                                              FontWeight.w800),
                                                     ),
                                                   ),
                                                   Container(
-                                                    margin: const EdgeInsets.only(
-                                                        left: 35, right: 20),
+                                                    margin:
+                                                        const EdgeInsets.only(
+                                                            left: 35,
+                                                            right: 20),
                                                     child: const Text(
                                                       '8',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 46,
-                                                          fontWeight: FontWeight.w800),
+                                                          fontWeight:
+                                                              FontWeight.w800),
                                                     ),
                                                   ),
                                                 ],
@@ -332,7 +349,7 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                      ),  
+                      ),
                     ],
                   ),
                   Positioned(

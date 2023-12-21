@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
-import 'package:http/http.dart';
+
 
 void main() {
   runApp(const LoginScreen());

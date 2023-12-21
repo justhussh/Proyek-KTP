@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/first_display.dart';
 
-
 void main() {
   runApp(const MyApp());
 }

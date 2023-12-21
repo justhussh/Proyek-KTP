@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
 import 'package:proyek_ktp_3e/home.dart';
-import 'package:proyek_ktp_3e/homepage.dart';
-import 'package:proyek_ktp_3e/page/dataSewa.dart';
+
+import 'package:proyek_ktp_3e/page/datasewa.dart';
 
 class SewaPage extends StatefulWidget {
-  const SewaPage({super.key});
+  const SewaPage(
+      {super.key,
+      required this.nim,
+      required this.nama,
+      required this.ttl,
+      required this.prodi,
+      required this.alamat3});
+  final String nim;
+  final String nama;
+  final String ttl;
+  final String prodi;
+  final String alamat3;
   @override
   State<SewaPage> createState() => _SewaPageState();
 }
@@ -109,6 +120,11 @@ class _SewaPageState extends State<SewaPage> {
                             MaterialPageRoute(
                                 builder: (context) => DataSewa(
                                       mobil: mobil,
+                                      nim: widget.nim,
+                                      nama: widget.nama,
+                                      ttl: widget.ttl,
+                                      prodi: widget.prodi,
+                                      alamat3: widget.alamat3,
                                     )));
                       },
                       child: Container(
