@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/photo.dart';
+import 'package:proyek_ktp_3e/page/scan.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -165,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Photo()));
+                                          builder: (context) => const Scan()));
                                 },
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 19),

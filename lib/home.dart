@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/page/listsewa.dart';
-import 'package:proyek_ktp_3e/page/photo.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 import 'package:proyek_ktp_3e/homepage.dart';
 
@@ -43,8 +42,8 @@ class _Home extends State<Home> {
             ),
             child: FloatingActionButton(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Photo()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Scan()));
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(120.0))),

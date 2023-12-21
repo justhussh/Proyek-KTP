@@ -3,14 +3,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
+import 'package:proyek_ktp_3e/loading.dart';
 import 'package:proyek_ktp_3e/page/data_ktm.dart';
-import 'package:proyek_ktp_3e/page/datasewa.dart';
 import 'package:proyek_ktp_3e/page/scan.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
-import 'package:proyek_ktp_3e/page/sewapage.dart';
 
 class Photo extends StatefulWidget {
   const Photo({super.key});
@@ -103,7 +100,7 @@ class _PhotoState extends State<Photo> {
                   barrierDismissible: false,
                   context: context,
                   builder: (BuildContext context) {
-                    return Center(child: CircularProgressIndicator());
+                    return const Loading();
                   },
                 );
 
