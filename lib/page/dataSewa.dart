@@ -1,6 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
+import 'package:proyek_ktp_3e/Model/daftarmobil.dart';
 import 'package:proyek_ktp_3e/page/listsewa.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -379,7 +379,7 @@ class _DataSewaState extends State<DataSewa> {
 
   void saveData() async {
     String data =
-        'Mobil: ${widget.mobil.merk}, NIM: ${widget.nim}, Nama: ${widget.nama}';
+        '${widget.nim}\n${widget.nama}\n\n${widget.mobil.merk}\n${widget.mobil.harga}';
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> penyewaList = prefs.getStringList('penyewaList') ?? [];

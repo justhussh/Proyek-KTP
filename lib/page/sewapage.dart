@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyek_ktp_3e/CarList/daftarmobil.dart';
+import 'package:proyek_ktp_3e/Model/daftarmobil.dart';
 import 'package:proyek_ktp_3e/home.dart';
 
 import 'package:proyek_ktp_3e/page/datasewa.dart';

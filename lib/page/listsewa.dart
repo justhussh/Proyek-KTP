@@ -33,7 +33,17 @@ class _PenyewaState extends State<Penyewa> {
           return Card(
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: ListTile(
-              title: Text(penyewaData),
+              leading: Icon(Icons.person),
+              title: Container(
+                margin: EdgeInsets.only(
+                  bottom: 5,
+                ),
+                child: Text(
+                  'Deskripsi Penyewa :',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                ),
+              ),
+              subtitle: Text(penyewaData),
             ),
           );
         }).toList(),
