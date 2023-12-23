@@ -30,6 +30,11 @@ class _DataSewaState extends State<DataSewa> {
   final TextEditingController _hargaController = TextEditingController();
   final TextEditingController _statusController = TextEditingController();
   final TextEditingController _seatController = TextEditingController();
+  final TextEditingController _nimController = TextEditingController();
+  final TextEditingController _namaController = TextEditingController();
+  final TextEditingController _ttlController = TextEditingController();
+  final TextEditingController _prodiController = TextEditingController();
+  final TextEditingController _alamat3Controller = TextEditingController();
 
   @override
   void initState() {
@@ -40,6 +45,11 @@ class _DataSewaState extends State<DataSewa> {
     _hargaController.text = widget.mobil.harga;
     _statusController.text = widget.mobil.avail;
     _seatController.text = widget.mobil.seat;
+    _nimController.text = widget.nim;
+    _namaController.text = widget.nama;
+    _ttlController.text = widget.ttl;
+    _prodiController.text = widget.prodi;
+    _alamat3Controller.text = widget.alamat3;
   }
 
   @override
@@ -246,7 +256,7 @@ class _DataSewaState extends State<DataSewa> {
                             SizedBox(
                               height: 40,
                               child: TextFormField(
-                                initialValue: widget.nim,
+                                controller: _nimController,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
@@ -267,7 +277,7 @@ class _DataSewaState extends State<DataSewa> {
                             SizedBox(
                               height: 40,
                               child: TextFormField(
-                                initialValue: widget.nama,
+                                controller: _namaController,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
@@ -288,7 +298,7 @@ class _DataSewaState extends State<DataSewa> {
                             SizedBox(
                               height: 40,
                               child: TextFormField(
-                                initialValue: widget.ttl,
+                                controller: _ttlController,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
@@ -309,7 +319,7 @@ class _DataSewaState extends State<DataSewa> {
                             SizedBox(
                               height: 40,
                               child: TextFormField(
-                                initialValue: widget.prodi,
+                                controller: _prodiController,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
@@ -330,7 +340,7 @@ class _DataSewaState extends State<DataSewa> {
                             SizedBox(
                               height: 40,
                               child: TextFormField(
-                                initialValue: widget.alamat3,
+                                controller: _alamat3Controller,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
