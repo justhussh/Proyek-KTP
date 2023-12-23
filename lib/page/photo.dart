@@ -104,7 +104,7 @@ class _PhotoState extends State<Photo> {
                   },
                 );
 
-                final url = Uri.parse('http://192.168.1.12:5000/read');
+                final url = Uri.parse('http://11.11.11.79:5000/read');
                 var request = http.MultipartRequest('POST', url);
 
                 http.MultipartFile multipartFile =
