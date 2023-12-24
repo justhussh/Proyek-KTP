@@ -44,7 +44,7 @@ class DataKtm extends StatelessWidget {
                               onTap: () {
                                 Navigator.pop(context);
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 size: 35,
                                 color: Colors.blue,
@@ -100,11 +100,9 @@ class DataKtm extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            child: Text('Data KTM'),
-                          ),
-                          // NIM
+                          const Text('Data KTM'),
 
+                          // NIM
                           const Text(
                             "NIM",
                             style:
@@ -270,11 +268,11 @@ class DataKtm extends StatelessWidget {
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10)),
-                                  padding: EdgeInsets.all(15),
-                                  textStyle: TextStyle(
+                                  padding: const EdgeInsets.all(15),
+                                  textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold)),
-                              child: Text('Pilih Mobil'))
+                              child: const Text('Pilih Mobil'))
                         ],
                       ),
                     ),
@@ -287,5 +285,4 @@ class DataKtm extends StatelessWidget {
       ),
     );
   }
-  
 }

@@ -47,7 +47,7 @@ class _SewaPageState extends State<SewaPage> {
                               MaterialPageRoute(
                                   builder: (context) => const Home()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 35,
                           color: Colors.blue,
@@ -93,19 +93,19 @@ class _SewaPageState extends State<SewaPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     left: 20,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Daftar Mobil',
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   )),
               Container(
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 width: 400,
                 height: 300,
                 child: ListView.builder(
@@ -129,7 +129,7 @@ class _SewaPageState extends State<SewaPage> {
                       },
                       child: Container(
                         constraints:
-                            BoxConstraints(maxWidth: 290, maxHeight: 400),
+                            const BoxConstraints(maxWidth: 290, maxHeight: 400),
                         child: Card(
                           margin: const EdgeInsets.all(10.0),
                           child: Column(
@@ -150,11 +150,11 @@ class _SewaPageState extends State<SewaPage> {
                                 children: [
                                   Container(
                                     margin: const EdgeInsets.only(left: 11),
-                                    child: Column(
+                                    child: const Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
+                                        Text(
                                           'Harga',
                                           style: TextStyle(
                                               fontWeight: FontWeight.w300,
@@ -164,7 +164,7 @@ class _SewaPageState extends State<SewaPage> {
                                     ),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(right: 10),
+                                    margin: const EdgeInsets.only(right: 10),
                                     child: Row(
                                       children: [
                                         Icon(
@@ -172,7 +172,7 @@ class _SewaPageState extends State<SewaPage> {
                                           size: 15,
                                           color: Colors.black.withOpacity(0.3),
                                         ),
-                                        SizedBox(width: 6),
+                                        const SizedBox(width: 6),
                                         Text(mobil.seat)
                                       ],
                                     ),
@@ -180,27 +180,27 @@ class _SewaPageState extends State<SewaPage> {
                                 ],
                               ),
                               Container(
-                                  margin: EdgeInsets.only(left: 11),
+                                  margin: const EdgeInsets.only(left: 11),
                                   child: Text(
                                     mobil.harga,
-                                    style: TextStyle(fontSize: 20),
+                                    style: const TextStyle(fontSize: 20),
                                   )),
-                              SizedBox(height: 25),
+                              const SizedBox(height: 25),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(left: 11),
+                                    margin: const EdgeInsets.only(left: 11),
                                     child: Text(mobil.merk,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontWeight: FontWeight.w300,
                                             fontSize: 12)),
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(right: 11),
+                                    margin: const EdgeInsets.only(right: 11),
                                     child: Text(mobil.avail,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 14)),
                                   )

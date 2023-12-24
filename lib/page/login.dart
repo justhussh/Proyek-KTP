@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/register.dart';
 
-
 void main() {
   runApp(const LoginScreen());
 }
@@ -73,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 50,
                       child: TextFormField(
+                        obscureText: true,
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(
                                 borderSide:
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Home()));
+                                    builder: (context) => const Home()));
                           },
                           child: const Text(
                             'Login',
@@ -162,44 +162,38 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    child: ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Image.asset(
-                          'assets/google.png',
-                          width: 24,
-                          height: 24,
+                  ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        'assets/google.png',
+                        width: 24,
+                        height: 24,
+                      ),
+                      label: const Padding(
+                        padding: EdgeInsets.only(left: 25, right: 25),
+                        child: Text(
+                          'Google',
+                          style: TextStyle(color: Colors.black87),
                         ),
-                        label: Padding(
-                          padding: const EdgeInsets.only(left: 25, right: 25),
-                          child: const Text(
-                            'Google',
-                            style: TextStyle(color: Colors.black87),
-                          ),
-                        )),
-                  ),
+                      )),
                   // const SizedBox(width: 16),
-                  Container(
-                    child: ElevatedButton.icon(
-                        onPressed: () {
-                          // final response = await get(Uri.parse("http://192.168.69.11:5000"));
-                          // print(response);
-                        },
-                        icon: Image.asset(
-                          'assets/facebook.png',
-                          width: 24,
-                          height: 24,
+                  ElevatedButton.icon(
+                      onPressed: () {
+                        // final response = await get(Uri.parse("http://192.168.69.11:5000"));
+                        // print(response);
+                      },
+                      icon: Image.asset(
+                        'assets/facebook.png',
+                        width: 24,
+                        height: 24,
+                      ),
+                      label: const Padding(
+                        padding: EdgeInsets.only(left: 18, right: 18),
+                        child: Text(
+                          'Facebook',
+                          style: TextStyle(color: Colors.black87),
                         ),
-                        label: Padding(
-                          padding: const EdgeInsets.only(left: 18, right: 18),
-                          child: const Text(
-                            'Facebook',
-                            style: TextStyle(color: Colors.black87),
-                          ),
-                        )
-                    ),
-                  ),
-
+                      )),
                 ],
               ),
               const SizedBox(

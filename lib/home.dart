@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 
 class _Home extends State<Home> {
   int index = 0;
-  final screens = [HomePage(), Scan(), Penyewa()];
+  final screens = [const HomePage(), const Scan(), Penyewa()];
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _Home extends State<Home> {
       home: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Padding(
-          padding: EdgeInsets.only(bottom: .0), // Pergeseran ke bawah
+          padding: const EdgeInsets.only(bottom: .0), // Pergeseran ke bawah
           child: Container(
             width: 70.0, // Atur lebar tombol
             height: 70.0, // Atur tinggi tombol
@@ -33,10 +33,11 @@ class _Home extends State<Home> {
               borderRadius: BorderRadius.circular(50),
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromARGB(255, 181, 181, 181).withOpacity(0.5),
+                  color:
+                      const Color.fromARGB(255, 181, 181, 181).withOpacity(0.5),
                   spreadRadius: 1,
                   blurRadius: 3,
-                  offset: Offset(0, 2.5), // posisi bayangan
+                  offset: const Offset(0, 2.5), // posisi bayangan
                 ),
               ],
             ),
@@ -45,18 +46,18 @@ class _Home extends State<Home> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Scan()));
               },
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(120.0))),
-              backgroundColor: Color.fromRGBO(93, 60, 191, 100),
-              child: Icon(Icons.add, color: Colors.white, size: 34),
+              backgroundColor: const Color.fromRGBO(93, 60, 191, 100),
+              child: const Icon(Icons.add, color: Colors.white, size: 34),
             ),
           ),
         ),
         bottomNavigationBar: NavigationBarTheme(
           data: NavigationBarThemeData(
-              indicatorColor: Color.fromARGB(0, 255, 0, 0),
+              indicatorColor: const Color.fromARGB(0, 255, 0, 0),
               labelTextStyle: MaterialStateProperty.all(
-                TextStyle(fontSize: 15, fontWeight: FontWeight.w900),
+                const TextStyle(fontSize: 15, fontWeight: FontWeight.w900),
               ),
               shadowColor: Colors.black),
           child: NavigationBar(
@@ -64,11 +65,11 @@ class _Home extends State<Home> {
                 setState(() => this.index = index),
             height: 92,
             selectedIndex: index,
-            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
             destinations: [
               Container(
-                margin: EdgeInsets.only(bottom: 8),
-                child: NavigationDestination(
+                margin: const EdgeInsets.only(bottom: 8),
+                child: const NavigationDestination(
                   icon: Icon(Icons.home, size: 36),
                   selectedIcon: Icon(Icons.home,
                       size: 36, color: Color.fromRGBO(66, 11, 173, 100)),
@@ -77,15 +78,15 @@ class _Home extends State<Home> {
               ),
               Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: 30),
-                  child: Text("Scan",
+                  margin: const EdgeInsets.only(top: 30),
+                  child: const Text("Scan",
                       style: TextStyle(
                           fontSize: 15,
-                          color: const Color.fromARGB(255, 0, 0, 0),
+                          color: Color.fromARGB(255, 0, 0, 0),
                           fontWeight: FontWeight.w900))),
               Container(
-                margin: EdgeInsets.only(bottom: 8),
-                child: NavigationDestination(
+                margin: const EdgeInsets.only(bottom: 8),
+                child: const NavigationDestination(
                   icon: Icon(Icons.inbox, size: 36),
                   selectedIcon: Icon(Icons.inbox,
                       size: 36, color: Color.fromRGBO(66, 11, 173, 100)),

@@ -17,45 +17,44 @@ class _ScanState extends State<Scan> {
       home: Scaffold(
         appBar: AppBar(
             title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  alignment: Alignment.topLeft,
-                  child: IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const Home())); // Navigate back to the previous screen
-                    },
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.topLeft,
-                  child: const Text(
-                    'Step by Step',
-                    style: TextStyle(fontSize: 23),
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.topLeft,
-                  child: IconButton(
-                    icon: const Icon(Icons.info),
-                    onPressed: () {
-                    },
-                  ),
-                ),
-              ],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const Home())); // Navigate back to the previous screen
+                },
+              ),
+            ),
+            Container(
+              alignment: Alignment.topLeft,
+              child: const Text(
+                'Step by Step',
+                style: TextStyle(fontSize: 23),
+              ),
+            ),
+            Container(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                icon: const Icon(Icons.info),
+                onPressed: () {},
+              ),
+            ),
+          ],
         )),
         body: Column(
           children: [
             Center(
               child: Container(
-                margin: EdgeInsets.only(top: 20),
-                constraints: BoxConstraints(maxWidth: 300),
-                child: Text(
+                margin: const EdgeInsets.only(top: 20),
+                constraints: const BoxConstraints(maxWidth: 300),
+                child: const Text(
                   'Register Yourself Now!',
                   style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
@@ -64,8 +63,8 @@ class _ScanState extends State<Scan> {
             ),
             Center(
               child: Container(
-                constraints: BoxConstraints(maxWidth: 250),
-                child: Text(
+                constraints: const BoxConstraints(maxWidth: 250),
+                child: const Text(
                   'Follow the provided steps and complete the data below!',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
                   textAlign: TextAlign.center,
@@ -90,7 +89,7 @@ class _ScanState extends State<Scan> {
                           fit: BoxFit.contain,
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          padding: const EdgeInsets.symmetric(horizontal: 15),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -239,8 +238,8 @@ class _ScanState extends State<Scan> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Photo()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Photo()));
               },
               child: Container(
                 margin: const EdgeInsets.only(top: 50),

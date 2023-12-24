@@ -369,7 +369,7 @@ class _DataSewaState extends State<DataSewa> {
               child: FloatingActionButton(
                 onPressed: () {
                   saveData();
-                  Future.delayed(Duration(milliseconds: 300), () {
+                  Future.delayed(const Duration(milliseconds: 300), () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Penyewa()));
                   });
@@ -377,7 +377,7 @@ class _DataSewaState extends State<DataSewa> {
                 backgroundColor: Colors.blue,
                 heroTag: null,
                 mini: false,
-                child: Text(
+                child: const Text(
                   'SEWA',
                   style: TextStyle(fontSize: 15, color: Colors.white),
                 ),

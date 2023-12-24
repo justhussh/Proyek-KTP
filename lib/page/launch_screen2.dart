@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:proyek_ktp_3e/home.dart';
 import 'package:proyek_ktp_3e/page/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
@@ -51,13 +50,13 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
 
   Widget _indicator(bool isActive) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 150),
-      margin: EdgeInsets.symmetric(horizontal: 6.0),
+      duration: const Duration(milliseconds: 150),
+      margin: const EdgeInsets.symmetric(horizontal: 6.0),
       height: 8,
       width: isActive ? 24 : 7,
       decoration: BoxDecoration(
-          color: isActive ? Colors.black : Color(0xffd8dce7),
-          borderRadius: BorderRadius.all(Radius.circular(12))),
+          color: isActive ? Colors.black : const Color(0xffd8dce7),
+          borderRadius: const BorderRadius.all(Radius.circular(12))),
     );
   }
 
@@ -72,31 +71,32 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      textStyle:
-                          const TextStyle(fontSize: 20, color: Colors.red),
-                    ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
-                    },
-                    child: Container(
-                      margin: EdgeInsets.only(right: 20),
-                      child: Text('Skip',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                          )),
-                    ),
-                  )),
-
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20, color: Colors.red),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.only(right: 20),
+                    child: const Text('Skip',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                        )),
+                  ),
+                ),
+              ),
               //page slicing 1
               Container(
                 height: 600,
                 child: PageView(
-                  physics: ClampingScrollPhysics(),
+                  physics: const ClampingScrollPhysics(),
                   controller: _pageController,
                   onPageChanged: (int page) {
                     setState(() {
@@ -174,12 +174,10 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(height: 58),
-                        Container(
-                          child: Image.asset(
-                            'assets/Card 7.png',
-                            alignment: Alignment(-1, -1),
-                          ),
+                        const SizedBox(height: 58),
+                        Image.asset(
+                          'assets/Card 7.png',
+                          alignment: const Alignment(-1, -1),
                         ),
                       ],
                     ),
@@ -215,12 +213,10 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                        SizedBox(height: 68),
-                        Container(
-                          child: Image.asset(
-                            'assets/Card 8.png',
-                            alignment: Alignment(-1, -1),
-                          ),
+                        const SizedBox(height: 68),
+                        Image.asset(
+                          'assets/Card 8.png',
+                          alignment: const Alignment(-1, -1),
                         ),
                       ],
                     ),
@@ -259,7 +255,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                         ],
                       ),
                     )))
-                  : Text(''),
+                  : const Text(''),
             ],
           ),
         ),
@@ -268,10 +264,10 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
           ? Container(
               height: 140,
               width: double.infinity,
-              color: Color.fromRGBO(255, 251, 254, 1),
+              color: const Color.fromRGBO(255, 251, 254, 1),
               child: Center(
                 child: Padding(
-                    padding: EdgeInsets.only(bottom: 80),
+                    padding: const EdgeInsets.only(bottom: 80),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -287,10 +283,10 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                           borderRadius: BorderRadius.circular(
                               12), // Mengatur radius border menjadi 12
                         ),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                             horizontal: 150), // Mengatur padding horizontal
                       ),
-                      child: Padding(
+                      child: const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 10), // Mengatur padding vertikal
                         child: Text(
@@ -305,7 +301,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                     )),
               ),
             )
-          : Text(''),
+          : const Text(''),
     );
   }
 }

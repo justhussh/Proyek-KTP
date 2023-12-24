@@ -41,7 +41,7 @@ class WelcomePageKTP extends State<WelcomePage>
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (_) => const LaunchScreen1(),
       ));
@@ -55,22 +55,21 @@ class WelcomePageKTP extends State<WelcomePage>
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
           body: Container(
-        color: Color.fromARGB(4, 255, 255, 255),
+        color: const Color.fromARGB(4, 255, 255, 255),
         height: MediaQuery.of(context).size.height,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              child: Image.asset(
-                'assets/logo.png',
-                width: 120,
-                height: 120,
-              ),
+            Image.asset(
+              'assets/logo.png',
+              width: 120,
+              height: 120,
             ),
           ],
         ),
