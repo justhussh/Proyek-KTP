@@ -72,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 50,
                       child: TextFormField(
+                        
                         obscureText: true,
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(

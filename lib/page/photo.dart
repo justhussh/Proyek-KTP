@@ -104,7 +104,7 @@ class _PhotoState extends State<Photo> {
                   },
                 );
 
-                final url = Uri.parse('http://192.168.0.103:5000/read');
+                final url = Uri.parse('http://192.168.73.253:5000/read');
                 var request = http.MultipartRequest('POST', url);
 
                 http.MultipartFile multipartFile =
@@ -119,7 +119,7 @@ class _PhotoState extends State<Photo> {
                   // Convert the response stream to an http.Response object
                   final response =
                       await http.Response.fromStream(responseStream);
-
+  
                   print('Response status code: ${response.statusCode}');
                   print('Response body: ${response.body}');
 
@@ -140,6 +140,7 @@ class _PhotoState extends State<Photo> {
 
                     // Hide the loading dialog
                     Navigator.pop(context);
+                    
 
                     // Navigate to the next page (optional)
                     Navigator.push(

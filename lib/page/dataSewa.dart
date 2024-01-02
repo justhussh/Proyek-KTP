@@ -58,6 +58,7 @@ class _DataSewaState extends State<DataSewa> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: SingleChildScrollView(
+            physics: PageScrollPhysics(),
             child: Container(
               margin: const EdgeInsets.only(top: 30),
               child: SafeArea(
@@ -141,14 +142,6 @@ class _DataSewaState extends State<DataSewa> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            const Text(
-                              "Data Penyewa",
-                              style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
-                            ),
                             const SizedBox(
                               height: 15,
                             ),
@@ -337,14 +330,17 @@ class _DataSewaState extends State<DataSewa> {
                               style: TextStyle(
                                   fontSize: 15, color: Colors.black54),
                             ),
-                            SizedBox(
-                              height: 40,
-                              child: TextFormField(
-                                controller: _alamat3Controller,
-                                decoration: const InputDecoration(
-                                  border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(10))),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 0),
+                              child: SizedBox(
+                                height: 40,
+                                child: TextFormField(
+                                  controller: _alamat3Controller,
+                                  decoration: const InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
+                                  ),
                                 ),
                               ),
                             ),

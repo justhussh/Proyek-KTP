@@ -71,7 +71,7 @@ class LaunchScreen1Ktp extends State<LaunchScreen1Page> {
                 ),
               ],
             ),
-            const Text('Camps\nScanner!',
+            const Text('GoRent!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 48,

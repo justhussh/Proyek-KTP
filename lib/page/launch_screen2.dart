@@ -111,7 +111,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                         const Align(
                           alignment: Alignment.center,
                           child: Text(
-                            'Campes Data',
+                            'GoRent Data User',
                             style: TextStyle(
                               fontSize: 32,
                               height: 1.0851875,
@@ -149,7 +149,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                         const Align(
                           alignment: Alignment.center,
                           child: Text(
-                            'Campes Ranking',
+                            'GoRent Ranking User',
                             style: TextStyle(
                               fontSize: 32,
                               height: 1.0851875,
@@ -188,7 +188,7 @@ class LaunchScreen2Ktp extends State<LaunchScreen2Page> {
                         const Align(
                           alignment: Alignment.center,
                           child: Text(
-                            'Campes Daftar',
+                            'Gorent Daftar User',
                             style: TextStyle(
                               fontSize: 32,
                               height: 1.0851875,

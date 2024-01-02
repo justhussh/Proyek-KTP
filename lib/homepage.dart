@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                                       margin: const EdgeInsets.only(
                                           top: 40, left: 20),
                                       child: const Text(
-                                        'Camps Scanner',
+                                        'GoRent',
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 24,
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                                       child: const Expanded(
                                         flex: 1,
                                         child: Text(
-                                          'Scan Your KTP, KTM, or Other Identity Card.',
+                                          'Scan Your KTP, KTM, or Other Identity Card before renting the char',
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 14,
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      'Camps Scanner',
+                                      'GoRent',
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                                               Color.fromARGB(255, 84, 0, 168)),
                                     ),
                                     Text(
-                                      'Scan Your Card',
+                                      'Rent a Car',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w300),
                                     )
